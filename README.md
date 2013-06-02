@@ -2,7 +2,7 @@
 Translates between country name and abbreviation and vise versa.
 
 ## Installation
-Refer to [vinelab/country on packagist.org](https://packagist.org/search/?q=vinelab%2Fcountry) for composer installation instructions.
+Refer to [vinelab/country on packagist.org](https://packagist.org/packages/vinelab/country) for composer installation instructions.
 
 Edit **app.php** and add ```'Vinelab\Country\CountryServiceProvider',``` to the ```'providers'``` array.
 
