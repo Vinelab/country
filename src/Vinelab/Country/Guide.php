@@ -2,7 +2,7 @@
 
 Class Guide {
 
-	function __construct($config)
+	function __construct(\Illuminate\Config\Repository $config)
 	{
 		$this->config = $config;
 	}
