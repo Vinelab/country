@@ -1,0 +1,25 @@
+{
+    "name": "vinelab/country",
+    "description": "",
+    "authors": [
+        {
+            "name": "Abed Halawi",
+            "email": "abed.halawi@vinelab.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+
+    "require-dev": {
+        "mockery/mockery": "dev-master"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "Vinelab\\Country": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
