@@ -14,3 +14,5 @@ It will automatically alias itself as **Country** so no need to aslias it in you
 $countryName = Country::name('US'); // United States
 $countryAbbreviation = Country::abbreviation('United States'); // US
 ```
+
+> No tests provided with this package as it is a bit tricky to test at this point...
