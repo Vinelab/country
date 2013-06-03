@@ -1,6 +1,7 @@
 {
     "name": "vinelab/country",
     "description": "",
+    "license": "MIT",
     "authors": [
         {
             "name": "Abed Halawi",
