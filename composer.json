@@ -19,7 +19,7 @@
 
     "autoload": {
         "psr-0": {
-            "Vinelab\\Country": "src/"
+            "Vinelab\\Services\\Country": "src/"
         }
     },
     "minimum-stability": "dev"

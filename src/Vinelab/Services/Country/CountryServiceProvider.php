@@ -1,4 +1,4 @@
-<?php namespace Vinelab\Country;
+<?php namespace Vinelab\Services\Country;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -35,7 +35,7 @@ class CountryServiceProvider extends ServiceProvider {
 		$this->app->booting(function() {
 
 			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-			$loader->alias('Country', 'Vinelab\Country\Facades\Guide');
+			$loader->alias('Country', 'Vinelab\Services\Country\Facades\Guide');
 		});
 	}
 
