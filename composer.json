@@ -1,6 +1,7 @@
 {
     "name": "vinelab/country",
     "description": "",
+    "keywords": ["laravel", "countries"],
     "license": "MIT",
     "authors": [
         {
