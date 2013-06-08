@@ -1,4 +1,4 @@
-<?php namespace Vinelab\Services\Country;
+<?php namespace Vinelab\Country;
 
 Class Guide {
 

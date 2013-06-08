@@ -1,4 +1,4 @@
-<?php namespace Vinelab\Services\Country\Facades;
+<?php namespace Vinelab\Country\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -9,6 +9,6 @@ Class Guide extends Facade {
 	 *
 	 * @return string
 	 */
-	protected static function getFacadeAccessor() { return 'country'; }
+	protected static function getFacadeAccessor() { return 'vinelab.country'; }
 
 }
