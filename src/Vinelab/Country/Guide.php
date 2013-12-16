@@ -18,4 +18,9 @@ Class Guide {
 		$countries = $this->config->get('country::countries');
 		return array_search(ucwords($name), $countries);
 	}
+
+	public function all()
+	{
+		return $this->config->get('country::countries');
+	}
 }
