@@ -23,5 +23,5 @@
             "Vinelab\\Country": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
