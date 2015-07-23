@@ -1,6 +1,6 @@
 <?php
 
-return array (
+return array(
   'AD' => 'Andorra',
   'AE' => 'United Arab Emirates',
   'AF' => 'Afghanistan',

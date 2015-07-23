@@ -1,26 +1,30 @@
-<?php namespace Vinelab\Country;
+<?php
 
-Class Guide {
+namespace Vinelab\Country;
 
-	function __construct(\Illuminate\Config\Repository $config)
-	{
-		$this->config = $config;
-	}
+class Guide
+{
+    public function __construct(\Illuminate\Config\Repository $config)
+    {
+        $this->config = $config;
+    }
 
-	public function name($abbreviation)
-	{
-		$abbreviation = strtoupper($abbreviation);
-		return $this->config->get("country::countries.{$abbreviation}");
-	}
+    public function name($abbreviation)
+    {
+        $abbreviation = strtoupper($abbreviation);
 
-	public function abbreviation($name)
-	{
-		$countries = $this->config->get('country::countries');
-		return array_search(ucwords($name), $countries);
-	}
+        return $this->config->get("country::countries.{$abbreviation}");
+    }
 
-	public function all()
-	{
-		return $this->config->get('country::countries');
-	}
+    public function abbreviation($name)
+    {
+        $countries = $this->config->get('country::countries');
+
+        return array_search(ucwords($name), $countries);
+    }
+
+    public function all()
+    {
+        return $this->config->get('country::countries');
+    }
 }
