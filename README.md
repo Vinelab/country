@@ -1,12 +1,16 @@
-## Country package for Laravel 4
+## Country package for Laravel 4 & 5
 Translates between country name and abbreviation and vise versa.
 
 ## Installation
-Refer to [vinelab/country on packagist.org](https://packagist.org/packages/vinelab/country) for composer installation instructions.
 
-Edit **app.php** and add ```'Vinelab\Country\CountryServiceProvider',``` to the ```'providers'``` array.
+```
+composer update vinelab/country
+```
 
-It will automatically alias itself as **Country** so no need to aslias it in your **app.php** unless you would like to customize it. In that case edit your **'aliases'** in **app.php** adding ``` 'MyCountry'	  => 'Vinelab\Country\Facades\Guide',```
+## Publish Config File
+```
+php artisan vendor:publish
+```
 
 ## Usage
 

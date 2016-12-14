@@ -182,6 +182,7 @@ return array(
   'NU' => 'Niue',
   'NZ' => 'New Zealand',
   'OM' => 'Oman',
+  'PS' => 'Palestine',
   'PA' => 'Panama',
   'PC' => 'Pacific Islands Trust Territory',
   'PE' => 'Peru',

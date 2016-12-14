@@ -19,7 +19,7 @@ class CountryServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-        __DIR__.'/../config/countries.php' => config_path('countries.php')
+        __DIR__.'/../../config/countries.php' => config_path('countries.php')
     ], 'config');
     }
 
