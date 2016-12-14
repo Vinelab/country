@@ -13,18 +13,20 @@ class Guide
     {
         $abbreviation = strtoupper($abbreviation);
 
-        return $this->config->get("country::countries.{$abbreviation}");
+        return $this->config->get("countries.{$abbreviation}");
     }
 
     public function abbreviation($name)
     {
-        $countries = $this->config->get('country::countries');
+        $countries = $this->config->get('countries');
 
         return array_search(ucwords($name), $countries);
     }
 
     public function all()
     {
-        return $this->config->get('country::countries');
+        return $this->config->get('countries');
     }
+
 }
+

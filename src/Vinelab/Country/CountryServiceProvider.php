@@ -18,7 +18,9 @@ class CountryServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('vinelab/country');
+        $this->publishes([
+        __DIR__.'/../config/countries.php' => config_path('countries.php')
+    ], 'config');
     }
 
     /**
@@ -37,13 +39,4 @@ class CountryServiceProvider extends ServiceProvider
         });
     }
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return array();
-    }
 }
