@@ -2,7 +2,7 @@
 
 return array(
   'AD' => 'Andorra',
-  'AE' => 'United Arab Emirates',
+  'AE' => ['UAE', 'United Arab Emirates'],
   'AF' => 'Afghanistan',
   'AG' => 'Antigua and Barbuda',
   'AI' => 'Anguilla',
@@ -64,7 +64,7 @@ return array(
   'DJ' => 'Djibouti',
   'DK' => 'Denmark',
   'DM' => 'Dominica',
-  'DO' => 'Dominican Republic',
+  'DO' => ['Dominican Republic', 'Dom. Republic'],
   'DZ' => 'Algeria',
   'EC' => 'Ecuador',
   'EE' => 'Estonia',

@@ -19,14 +19,19 @@ class Guide
     public function abbreviation($name)
     {
         $countries = $this->config->get('countries');
-
-        return array_search(ucwords($name), $countries);
+        if (array_search(ucwords($name), $countries)) {
+            return array_search(ucwords($name), $countries);
+        } else {
+            foreach ($countries as $key => $value) {
+                if (is_array($value) && in_array(strtolower($name), array_map('strtolower', $value))) {
+                    return $key;
+                }
+            }
+        }
     }
 
     public function all()
     {
         return $this->config->get('countries');
     }
-
 }
-
