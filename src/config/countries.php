@@ -220,6 +220,7 @@ return array(
   'SN' => 'Senegal',
   'SO' => 'Somalia',
   'SR' => 'Suriname',
+  'SS' => 'South Sudan',
   'ST' => 'São Tomé And Príncipe',
   'SU' => 'Union of Soviet Socialist Republics',
   'SV' => 'El Salvador',
