@@ -4,7 +4,14 @@ namespace Vinelab\Country\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Guide extends Facade
+/**
+ * @method static string name(string $abbreviation)
+ * @method string abbreviation(string $name)
+ * @method array all()
+ *
+ * @see \Vinelab\Country\Guide
+ */
+class Country extends Facade
 {
     /**
      * Get the registered name of the component.
