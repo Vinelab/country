@@ -28,5 +28,12 @@
             "Vinelab\\Country\\Tests\\": "tests/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vinelab\\Country\\CountryServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "stable"
 }

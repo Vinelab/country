@@ -3,7 +3,6 @@
 namespace Vinelab\Country;
 
 use Illuminate\Support\ServiceProvider;
-use Vinelab\Country\Facades\Country;
 
 class CountryServiceProvider extends ServiceProvider
 {
