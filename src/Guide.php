@@ -39,15 +39,12 @@ class Guide
     public function abbreviation(string $name)
     {
         $countries = $this->config->get('countries');
+        $found = $this->scanStringNames($name, $countries);
 
-        if (array_search(ucwords($name), $countries)) {
-            return array_search(ucwords($name), $countries);
+        if ($found) {
+            return $found;
         } else {
-            foreach ($countries as $key => $value) {
-                if (is_array($value) && in_array(strtolower($name), array_map('strtolower', $value))) {
-                    return $key;
-                }
-            }
+            return $this->scanArrayNames($name, $countries);
         }
     }
 
@@ -57,5 +54,29 @@ class Guide
     public function all(): array
     {
         return $this->config->get('countries');
+    }
+
+    /**
+     * @param string $name
+     * @param array $countries
+     * @return string|null
+     */
+    protected function scanStringNames(string $name, array $countries)
+    {
+        return array_search(ucwords($name), array_filter($countries, 'is_string'));
+    }
+
+    /**
+     * @param string $name
+     * @param array $countries
+     * @return string|null
+     */
+    protected function scanArrayNames(string $name, array $countries)
+    {
+        foreach (array_filter($countries, 'is_array') as $abbreviation => $names) {
+            if (in_array(strtolower($name), array_map('strtolower', $names))) {
+                return $abbreviation;
+            }
+        }
     }
 }

@@ -27,10 +27,16 @@ class GuideTest extends TestCase
         $this->config = $this->getMockedConfig($this->countries);
     }
 
-    public function test_get_country_abbreviation_from_name()
+    public function test_get_country_abbreviation_from_string_name()
     {
         $guide = new Guide($this->config);
         $this->assertEquals('LB', $guide->abbreviation('Lebanon'));
+    }
+
+    public function test_get_country_abbreviation_from_array_name()
+    {
+        $guide = new Guide($this->config);
+        $this->assertEquals('AE', $guide->abbreviation('United Arab Emirates'));
     }
 
     public function test_get_country_name_from_abbreviation()
