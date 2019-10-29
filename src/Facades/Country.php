@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @method static string name(string $abbreviation)
- * @method string abbreviation(string $name)
+ * @method static string abbreviation(string $name)
  * @method array all()
  *
  * @see \Vinelab\Country\Guide
