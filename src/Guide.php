@@ -13,6 +13,16 @@ class Guide
     private $config;
 
     /**
+     * @var string
+     */
+    public $name;
+
+    /**
+     * @var string
+     */
+    public $abbreviation;
+
+    /**
      * Guide constructor.
      * @param Repository $config
      */
@@ -27,9 +37,10 @@ class Guide
      */
     public function name(string $abbreviation)
     {
-        $abbreviation = strtoupper($abbreviation);
+        $this->abbreviation = strtoupper($abbreviation);
+        $this->name = Arr::get($this->config->get('countries'), $this->abbreviation);
 
-        return Arr::get($this->config->get('countries'), $abbreviation);
+        return $this;
     }
 
     /**
@@ -41,11 +52,15 @@ class Guide
         $countries = $this->config->get('countries');
         $found = $this->scanStringNames($name, $countries);
 
+        $this->name = $name;
+
         if ($found) {
-            return $found;
+            $this->abbreviation = $found;
         } else {
-            return $this->scanArrayNames($name, $countries);
+            $this->abbreviation = $this->scanArrayNames($name, $countries);
         }
+
+        return $this;
     }
 
     /**
