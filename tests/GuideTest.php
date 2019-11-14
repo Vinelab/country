@@ -1,31 +1,10 @@
 <?php
 
 namespace Vinelab\Country\Tests;
-
-use Illuminate\Contracts\Config\Repository;
-use Mockery;
-use PHPUnit\Framework\TestCase;
 use Vinelab\Country\Guide;
 
 class GuideTest extends TestCase
 {
-    /**
-     * @var array
-     */
-    protected $countries;
-
-    /**
-     * @var Repository|Mockery\MockInterface
-     */
-    private $config;
-
-    protected function setUp()
-    {
-        parent::setUp();
-
-        $this->countries = require __DIR__.'/../config/countries.php';
-        $this->config = $this->getMockedConfig($this->countries);
-    }
 
     public function test_get_country_abbreviation_from_string_name()
     {
@@ -51,17 +30,5 @@ class GuideTest extends TestCase
         $this->assertEquals($this->countries, $guide->all());
     }
 
-    /**
-     * @param array $countries
-     * @return Repository|Mockery\MockInterface
-     */
-    protected function getMockedConfig(array $countries)
-    {
-        $mConfig = Mockery::mock(Repository::class);
-        $mConfig->shouldReceive('get')->once()
-            ->with('countries')
-            ->andReturn($countries);
 
-        return $mConfig;
-    }
 }
